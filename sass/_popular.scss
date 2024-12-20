@@ -1,39 +1,39 @@
-.products {
-    margin-top: 90px;
-    .products__info {
+.popular {
+    padding: 90px 0;
+    .popular__info {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         h2 {
             font-size: 40px;
             font-weight: 500;
-            margin-bottom: 5px;
+            color: #0B254B;
+            line-height: 57px;
         }
         p {
             font-size: 18px;
             font-weight: 500;
+            color: #5E6E89;
         }
     }
 
-    .products__wrapper {
+    .popular__wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
-        .products__card {
+        .popular__card {
             img {
-                width: 281px;
-                height: 210px;
                 background-color: #7b7b7b0f;
             }
-            h4 {
+            h3 {
                 font-size: 16px;
                 font-weight: 500;
                 margin-top: 5px;
             }
-            h5 {
+            p {
+                color: $primary-color;
                 font-size: 20px;
                 font-weight: 500;
-                translate: 190px 10px;
-                color: $primary-color;
+                translate: 200px 10px;
             }
         }
     }
