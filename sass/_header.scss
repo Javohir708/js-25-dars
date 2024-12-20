@@ -1,0 +1,29 @@
+.header {
+    background-color: #fff;
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 75px;
+        .navbar__collection {
+            display: flex;
+            gap: 37px;
+            .navbar__link {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        .profile {
+            button {
+                border: none;
+                background-color: transparent;
+                margin-right: 5px;
+                cursor: pointer;
+                img {
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.products {
+    margin-top: 90px;
+    .products__info {
+        text-align: center;
+        margin-bottom: 60px;
+        h2 {
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    .products__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .products__card {
+            img {
+                width: 281px;
+                height: 210px;
+                background-color: #7b7b7b0f;
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+            h5 {
+                font-size: 20px;
+                font-weight: 500;
+                translate: 200px 10px;
+                color: $primary-color;
+            }
+        }
+    }
+}
