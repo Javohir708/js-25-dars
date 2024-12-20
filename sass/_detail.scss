@@ -1,0 +1,96 @@
+$product-bg-color: #f8f8f8;
+$product-border-color: #e0e0e0;
+$product-shadow-color: rgba(0, 0, 0, 0.1);
+$product-title-color: #2c3e50;
+$product-price-color: #e74c3c;
+$product-button-bg: #3498db;
+$product-button-bg-hover: darken($product-button-bg, 10%);
+$product-button-color: #fff;
+
+.body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $product-bg-color;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .product__container {
+        background-color: #fff;
+        padding: 25px;
+        border: 1px solid $product-border-color;
+        border-radius: 10px;
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 12px $product-shadow-color;
+        margin: 20px;
+    }
+
+    .product__image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px $product-shadow-color;
+    }
+
+    .product__details {
+        text-align: center;
+
+        .product__title {
+            color: $product-title-color;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .product__description {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .product__price {
+            color: $product-price-color;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product__button {
+            background: $product-button-bg;
+            color: $product-button-color;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                background: $product-button-bg-hover;
+                transform: translateY(-3px);
+                box-shadow: 0 4px 15px $product-shadow-color;
+            }
+
+            &:active {
+                transform: translateY(2px);
+                box-shadow: 0 2px 8px $product-shadow-color;
+            }
+        }
+    }
+}

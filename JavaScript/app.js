@@ -10,21 +10,26 @@ async function fetchData(endpoint) {
 }
 
 window.addEventListener("load", ()=> {
-    fetchData ("/products?limit=7")
+    fetchData ("/products?limit=8")
 })
 
-function createCard (data) {
-    data.products.forEach(product => {
-        const divEl = document.createElement("div")
-        divEl.className = "products__card"        
-        
+function createCard(data) {
+    data.products.forEach((product) => {
+        const divEl = document.createElement("div");
+        divEl.className = "products__card";
+
         divEl.innerHTML = `
-            <img src="${product.thumbnail}" alt="product image">
+            <img src="${product.thumbnail}" alt="product image" data-id="${product.id}">
             <h4>${product.title}</h4>
             <h5>${product.price}$</h5>
-        `
-        wrapperEl.appendChild(divEl)
+        `;
+        wrapperEl.appendChild(divEl);
     });
-    
-    
 }
+
+
+wrapperEl.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
+        open(`/page/product.html?id=${e.target.dataset.id}`, "_self");
+    }
+});
